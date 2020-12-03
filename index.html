@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Youtube</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="css/themes/p_yutube_api.min.css" />
+    <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="jquery-m-1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+    <script src="jquery-m-1.4.5/jQuery_v1.11.1.js"></script>
+    <script src="jquery-m-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+
+    <script src="css/fontawesome/js/all.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Pagina Principal -->
+    <div data-role="page" data-theme="a" id="home">
+        <div data-role="header" data-position="inline">
+            <h1><img src="images/youtube-logo.png"></h1>
+            <!-- Navegar entre paginas -->
+            <div data-role="navbar" >
+                <ul >
+                    <li>
+                        <a href="#home" style="font-size: 15px;" data-transition="fade">Inicio
+                            <i class="fa fa-home" aria-hidden="true"></i> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#search" style="font-size: 15px;" data-transition="fade">Buscar 
+                            <i class="fa fa-search" aria-hidden="true"></i> 
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="content" data-theme="b" class="content">
+
+            <div style="text-align: center;">
+                <h1 style="font-size: 50px; ">Últimos Videos</h1>
+                <div id="Most-popular" class="Video-list">
+                    <!-- Videos populares estan ahi -->
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Footer  -->
+        <div data-role="footer" data-position="fixed" style="text-align:center;" height=200px>
+            <h4>2020 &copy; Hecho por Victor @cyberveneco</h4>
+        </div>
+    </div>
+
+    <!-- Busqueda de los videos  -->
+    <div data-role="page" data-theme="a" id="search">
+        <div data-role="header" data-position="inline">
+            <h1><img src="images/youtube-logo.png"></h1>
+            <!-- Navegar entre paginas -->
+            <div data-role="navbar">
+                <ul>
+                    <li>
+                        <a href="#home" style="font-size: 15px;" data-transition="fade">Inicio
+                            <i class="fa fa-home" aria-hidden="true" ></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#search" style="font-size: 15px;" data-transition="fade">Buscar 
+                            <i class="fa fa-search" aria-hidden="true"></i> 
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="content" data-theme="b">
+            <div class="container">
+
+                <div class="search-head">
+                    <h1>Búsqueda</h1>
+                    <div class="search-input" id="search-input">
+                        <input type="text" id="searchtext" placeholder="Anote el nombre del video">
+                        <!--<input class="btn-sub" type="submit" onclick="search()" id="search" value="Buscar">-->
+                        <input type="submit" onclick="search()" id="search" value="Buscar">
+                    </div>
+
+                </div>
+                <div id="search-container" class="search-container">
+                    <h2>Resultados</h2>
+
+                    <div id="result">
+
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <!-- Footer  -->
+        <div data-role="footer" data-position="fixed" style="text-align:center;">
+            <h4>2020 &copy; Hecho por Victor @cyberveneco</h4>
+        </div>
+    </div>
+
+    <!-- Seccion del canal -->
+    <div data-role="page" data-theme="a" id="channelInfo">
+        <div data-role="header" data-position="inline">
+            <h1><img src="images/youtube-logo.png"></h1>
+            <!-- Navegar entre paginas -->
+            <div data-role="navbar">
+                <ul>
+                    <li>
+                        <a href="#home" style="font-size: 15px;" data-transition="fade">Home 
+                            <i class="fa fa-home" aria-hidden="true"></i> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#search" style="font-size: 15px;" data-transition="fade">Buscar 
+                            <i class="fa fa-search"aria-hidden="true"></i> 
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="content" data-theme="b">
+            <!-- Los datos del canal-->
+            <div id="chann">
+
+
+            </div>
+
+        </div>
+
+        <!-- Footer  -->
+        <div data-role="footer" data-position="fixed" style="text-align:center;">
+            <h4>2020 &copy; Hecho por Victor @cyberveneco</h4>
+        </div>
+    </div>
+
+    <!-- Seccion de videos -->
+    <div data-role="page" data-theme="a" id="showVideo">
+        <div data-role="header" data-position="inline">
+            <h1><img src="images/youtube-logo.png"></h1>
+            <!-- Navegar entre paginas -->
+            <div data-role="navbar">
+                <ul>
+                    <li>
+                        <a href="#home" style="font-size: 15px;" data-transition="fade">Home 
+                            <i class="fa fa-home" aria-hidden="true"></i> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#search" style="font-size: 15px;" data-transition="fade">Buscar 
+                            <i class="fa fa-search"aria-hidden="true"></i> 
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="content" data-theme="b">
+            <!-- Informacion del video que fue seleccionado -->
+            <div id="video-play">
+
+
+            </div>
+
+        </div>
+
+        <!-- Footer  -->
+        <div data-role="footer" data-position="fixed" style="text-align:center;">
+            <h4>2020 &copy; Hecho por Victor Leon</h4>
+        </div>
+    </div>
+
+    <script src="javascript/app.js"></script>
+
+</body>
+
+</html>

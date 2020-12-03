@@ -1,0 +1,150 @@
+.content {
+    display: flex;
+    justify-content: center;
+}
+
+#link-canal {
+    color: #4A35FD;
+    font-size: 10px;
+}
+
+
+/*****************************
+busqueda
+********************/
+
+.search-head {
+    text-align: center;
+    font-weight: 700px;
+    padding: 0px;
+}
+
+.search-head .search-input {
+    padding: 0px 0px 0px 0px;
+}
+
+.search-head .s-inp {
+    width: 80%;
+    height: 25px;
+    border-radius: 2px;
+    border: none;
+    font-size: 20px;
+    padding: 5px;
+    background: rgba(133, 0, 0);
+}
+
+.search-head .btn-sub {
+    height: 35px;
+    border-radius: 2px;
+    border: none;
+}
+
+
+
+/*****************************
+cuerpo
+**********************************/
+
+.search-container {
+    text-align: center;
+    padding: px 0px;
+    font-weight: 700px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.video-info {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+}
+
+.info {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.info h3,
+p {
+    text-align: left;
+    font-size: 80%;
+    margin: 0;
+    right: 0;
+}
+
+.titulo {
+    min-width: 0;
+    margin-right: 8px;
+    overflow: hidden;
+}
+
+.chaInfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+    height: 300px;
+}
+
+.Video-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.5em;
+    border: 1px;
+    height: auto;
+    width: auto;
+}
+
+.Video-card {
+    border-radius: 10px;
+    display: grid;
+    width: 320px;
+}
+
+.Video-card p {
+    justify-self: center;
+    align-self: center;
+    color: white;
+}
+
+.video-rep {
+    height: 500px;
+    width: 100%;
+}
+
+@media (min-width:1000px) {
+    .Video-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 0.5em;
+        height: auto;
+        width: auto;
+
+    }
+    .video-rep {
+        height: 600px;
+        width: 100%;
+    }
+}
+
+@media (max-width:600px) {
+    .Video-card {
+        border-radius: 10px;
+        display: grid;
+        padding-bottom: 10px;
+    }
+    .Video-list {
+        display: grid;
+        grid-template-columns: 2fr;
+        grid-gap: 0.5em;
+        border: 1px;
+        height: auto;
+        width: auto;
+        padding-left: 100px;
+    }
+    .video-rep {
+        height: 400px;
+        width: 100%;
+    }
+}
